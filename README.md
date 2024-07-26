@@ -22,3 +22,8 @@ Detects the most used language as well.
 `pip3 install -r requirements.txt`
 
 `flask run`
+
+## Screenshots
+
+!(./assets-readme/ssproject1.png)
+!(./assets-readme/ss2.png)
