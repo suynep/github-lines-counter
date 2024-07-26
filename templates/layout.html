@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block head %}
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link href="https://languages.abranhe.com/logos.css" rel="stylesheet">
+
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+      }
+    </style>
+
+    {% endblock %}
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/"
+        ><span class="material-symbols-outlined" class="navbar-link">
+          home
+        </span></a
+      >
+      <a href="/feedback" class="navbar-link">Feedback</a>
+
+    </nav>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+      {% block footer %} &copy; Copyright 2024 by
+      <a href="https://github.com/suynep" target="_blank">suywho</a>. ;) {%
+      endblock %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+{% extends "layout.html" %} {% block title %}Github Lines Counter GUI{% endblock
+%} {% block head %} {{ super() }}
+<style type="text/css">
+  .list-view {
+    color: #336699;
+  }
+</style>
+{% endblock %} {% block content %}
+<h1 id="title">Word Counter O/P</h1>
+<div class="list-view-wrapper">
+  <h1 class="list-view">most used extension: {{ max_used_ext }}</h1>
+  <h1 class="list-view">net word count: {{ word_count }}</h1>
+  <h1 class="list-view">net line count: {{ line_count }} </h1>
+  <h1 class="list-view">rank: {{ rank }}</h1>
+</div>
+<p class="additional-note"></p>
+
+<!-- <script>
+  document.querySelector(".list-view-wrapper").innerHTML += `
+        <h1 class="list-view">${max_used_ext}</h1>
+        <h1 class="list-view">${word_count}</h1>
+        <h1 class="list-view">${line_count}</h1>
+        <h1 class="list-view">${rank}</h1>
+        `;
+</script> -->
+{% endblock %} {% block footer %}
+
+<div class="footer-wrapper-home">
+  <div class="footer-ele">
+    <p>made with ❤️ in nepal w/ 🐍</p>
+  </div>
+  <div class="footer-ele">
+    <p>
+      &copy; Copyright 2024 by
+      <a href="https://github.com/suynep" target="_blank">suywho</a>. ;*
+    </p>
+  </div>
+</div>
+{% endblock %}

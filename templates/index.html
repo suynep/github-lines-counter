@@ -1,0 +1,62 @@
+{% extends "layout.html" %} {% block title %}Github Lines Counter GUI{% endblock
+%} {% block head %} {{ super() }}
+<style type="text/css">
+  .wrapper {
+    color: #336699;
+  }
+</style>
+{% endblock %} {% block content %}
+<form action="/clear_uploads" method="post">
+  <button type="submit" id="button-clr">Clear Local Uploads Dir</button>
+</form>
+<h1 id="title">Github Lines Counter WebGUI</h1>
+<div class="wrapper">
+  <form action="{{ url_for('word_count_req') }}" method="post">
+    <label for="url">Enter the URL of the Github repository:</label>
+    <input type="text" id="url" name="url" required />
+    <input type="submit" value="Submit" />
+    <br />
+    <label for="optional-upload"
+      >Or upload a <span>Folder yourself</span></label
+    >
+  </form>
+  <form
+    action="{{ url_for('word_count_req') }}"
+    method="post"
+    enctype="multipart/form-data"
+  >
+    <input
+      type="file"
+      id="optional-upload"
+      name="optional-upload"
+      accept=".zip"
+    />
+    <button type="submit">Upload</button>
+  </form>
+
+  {% if history %}
+  <h1>History</h1>
+  {% endif %} {% for hist in history %}
+  <div class="history-wrapper">
+    <p>{{ hist[0] }} {{ hist[1] }}</p>
+  </div>
+  {% endfor %} {% if clear %}
+  <script>
+    alert("{{ clear }}");
+  </script>
+  {% endif %}
+</div>
+
+{% endblock %} {% block footer %}
+<div class="footer-wrapper-home">
+  <div class="footer-ele">
+    <p>made with ❤️ in nepal w/ 🐍</p>
+  </div>
+  <div class="footer-ele">
+    <p>
+      &copy; Copyright 2024 by
+      <a href="https://github.com/suynep" target="_blank">suywho</a>. ;*
+    </p>
+  </div>
+</div>
+{% endblock %}
