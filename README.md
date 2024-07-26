@@ -25,5 +25,5 @@ Detects the most used language as well.
 
 ## Screenshots
 
-!([./assets-readme/ssproject1.png](https://github.com/suynep/github-lines-counter/blob/master/assets-readme/ssproject1.png))
-!([./assets-readme/ssproject1.png](https://github.com/suynep/github-lines-counter/blob/master/assets-readme/ss2.png))
+![./assets-readme/ssproject1.png](https://github.com/suynep/github-lines-counter/blob/master/assets-readme/ssproject1.png)
+![./assets-readme/ssproject1.png](https://github.com/suynep/github-lines-counter/blob/master/assets-readme/ss2.png)
